@@ -1,10 +1,119 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>80sVibes</title>
+    <link rel="shortcut icon" href="./img/logo80s.jpg" type="image/x-icon">
 </head>
 <body>
+    <main>
+        <!-- HEADER -->
+        <header class="header">
+          <div class="container">
+            <nav class="nav">
+              <ul class="nav-list">
+                <li class="nav-list__item">
+                  <a href="#top">Top</a>
+                </li>
+                <li class="nav-list__item">
+                  <a href="#consultaArtista">Consultar artista</a>
+                </li>
+                <li class="nav-list__item">
+                  <a href="#top10">Top 10</a>
+                </li>
+                <li class="nav-list__item">
+                  <a href="#suscribirme">Registrarse</a>
+                </li>
+                <li class="nav-list__item">
+                  <a href="#redes">Redes</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <!-- /HEADER -->
     
+        <!-- HERO -->
+        <section id="top" class="hero full-height bg-overlay">
+          <video class="hero-video-bg" autoplay muted loop>
+            <source src="./vids/portada.mp4" type="video/mp4">
+          </video>
+          <div class="container container-centered">
+            <h1 class="hero-title text-white">Sumérgete en el poder de la música y deja que sus melodías te transporten...</h1>
+            <a href="#" target="_blank" class="btn">Hágamoslo!</a>
+            <a href="#" target="_blank" class="btn">Saltar</a>
+          </div>
+        </section>
+        <!-- /HERO -->
+      
+        <!-- ABOUT -->
+        <section id="top10" class="about full-height">
+          <div class="container_top10 container-centered">
+            <h2 class="about-title">TOP 10 ARTISTAS</h2>
+            <div class="append" id="append"></div>
+          </div>
+        </section>
+        <!-- /ABOUT -->
+
+        <!-- Consultar artista -->
+        <section id="consultaArtista" class="subscribe bg-overlay">
+            <div class="container">
+              <h2 class="subscribe-title text-white">Consulta tu artista</h2>
+              <div class="subscribe-form">
+                <div class="form-field">
+                  <input type="text" placeholder="Artista" id="cantante">
+                </div>
+                <button class="btn" type="button" id="btnArtista">Consultar</button>
+              </div>
+            </div>
+          </section>
+          <canvas class="myChart" id="myChart"></canvas>
+          <!-- /Consultar artista -->
+      
+        <!-- SUBSCRIBE -->
+        <section id="suscribirme" class="subscribe bg-overlay">
+          <div class="container">
+            <h2 class="subscribe-title text-white">Unete a este increible universo</h2>
+            <form class="subscribe-form" action="">
+              <div class="form-field">
+                <input type="text" placeholder="Tu Nombre" required>
+              </div>
+              <div class="form-field">
+                <input type="email" placeholder="Tu correo" required>
+              </div>
+              <button class="btn" type="submit">Unirme!</button>
+            </form>
+          </div>
+        </section>
+        <!-- /SUBSCRIBE -->
+    
+        <!-- FOOTER -->
+        <footer id="redes" class="footer full-height">
+          <div class="container container-centered">
+            <h3 class="networks-title text-white">Redes sociales</h3>
+            <ul class="networks-list">
+              <li class="networks-list__item">
+                <a href="#">Facebook</a>
+              </li>
+              <li class="networks-list__item">
+                <a href="#">Youtube</a>
+              </li>
+              <li class="networks-list__item">
+                <a href="#">Twitter</a>
+              </li>
+            </ul>
+            <p class="networks-text">El mejor sitio de musica!</p>
+          </div>
+          <p class="copyright">© 2022 / Juan Manuel Calle - Roberto Raymundo Salinas</p>
+          <button id="callback"></button>
+        </footer>
+        <!-- /FOOTER -->
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./js/cards.js"></script>
+    <script src="./js/array.js"></script>
 </body>
 </html>
