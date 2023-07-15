@@ -20,7 +20,9 @@ import { artistas } from './top10.js';
     tabDiv.appendChild(tabNameDiv);
   
     const img = document.createElement('img');
-
+    img.style.width = '400px'
+    img.style.height = '225px'
+    img.src = urlImg;
     img.alt = 'featured 1';
   
     featuredImageDiv.appendChild(tabDiv);
