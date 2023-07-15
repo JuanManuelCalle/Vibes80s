@@ -72,6 +72,13 @@ async function cargarDatos() {
                 color: 'white'
               }
             }
+          },
+          onClick: function(event, elements) {
+            const index = elements[0].index;
+            const song = datos[index];
+            const PaginaCancionSelecciona = song.url;
+              
+            window.open(PaginaCancionSelecciona, "_blank");
           }
         }
       });
@@ -97,5 +104,23 @@ function generarColor() {
 btn.addEventListener("click", async () => {
   await cargarDatos();
 
-  console.log(datos);
+  const cantante = document.getElementById('cantante').value;
+
+  if(datos.length > 0)
+  {
+    console.log(datos);
+    Swal.fire({
+      title: 'Success!',
+      text: `El cantante ${cantante} se encontro correctamente`,
+      icon: 'success',
+      confirmButtonText: 'Cool'
+    })
+  }else{
+    Swal.fire({
+    title: 'Error!',
+    text: `El cantante ${cantante} no pudo ser encontrado`,
+    icon: 'error',
+    confirmButtonText: 'Cool'
+  })
+  }
 });

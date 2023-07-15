@@ -344,28 +344,7 @@ body {
   #callback:hover {
     animation: pulse-synth 1.5s infinite linear;
   }
-/* es una animacion con el mause */
-  @keyframes pulse-synth {
-    0% {
-      transform: scale(0.95);
-      box-shadow: 0 0 0 0 rgba(246, 1, 157, 0.7);
-    }
-  
-    50% {    
-      transform: scale(1.05);
-      box-shadow: 0 0 0 5px rgba(246, 1, 157, 0.25);
-    }
-  
-    70% {
-      transform: scale(1.05);
-      box-shadow: 0 0 0 10px rgba(246, 1, 157, 0);
-    }
-  
-    100% {
-      transform: scale(0.95);
-      box-shadow: 0 0 0 0 rgba(246, 1, 157, 0);
-    }
-  }
+
 
 .append{
     display: grid;
